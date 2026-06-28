@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
+/* ── Design tokens ── */
+@theme {
+  --font-serif: var(--font-playfair, "Playfair Display", Georgia, serif);
+  --font-sans:  var(--font-dm, "DM Sans", system-ui, sans-serif);
+
+  /* Blush / rose — primary accent */
+  --color-blush:      #E8B8A8;
+  --color-blush-lt:   #F5DDD6;
+  --color-blush-pale: #FBF0EB;
+  --color-blush-deep: #C97D66;
+
+  /* Gold — secondary premium accent */
+  --color-gold:       #C9922A;
+  --color-gold-pale:  #EDD9A3;
+  --color-gold-xp:    #FBF5E9;
+
+  /* Cream / ivory backgrounds */
+  --color-cream:      #F8F4F0;
+  --color-cream-2:    #F2EBE3;
+
+  /* Deep / espresso — dark sections & text */
+  --color-deep:       #1C1412;
+  --color-deep-2:     #261A12;
+  --color-deep-3:     #33200F;
+
+  /* Text scale */
+  --color-mid:        #6B5244;
+  --color-muted:      #9A8472;
+
+  /* Borders */
+  --color-border:     #E5D8CE;
+  --color-border-lt:  #EEE5DC;
+
+  /* Sage — soft tertiary */
+  --color-sage:       #B8C8BE;
+  --color-sage-lt:    #DEE8E2;
+}
+
+/* ── Backward-compat aliases ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-dark:     var(--color-deep);
+  --color-dark-2:   var(--color-deep-2);
+  --color-gold-xxp: #FEF9F6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ── Reset ── */
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-deep);
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-blush); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-blush-deep); }
+
+/* ── Selection ── */
+::selection { background: var(--color-blush-lt); color: var(--color-deep); }
+
+/* ── Marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 32s linear infinite; }
+
+/* ── Scroll reveal ── */
+._rev-hidden {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.72s ease, transform 0.72s ease;
+}
+._rev-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Organic blob shape ── */
+.blob {
+  border-radius: 62% 38% 46% 54% / 60% 44% 56% 40%;
+}
+
+/* ── Custom cursor ── */
+@media (hover: hover) {
+  body { cursor: none; }
+  a, button { cursor: none; }
 }
