@@ -7,6 +7,7 @@ import Link from "next/link";
 const links = [
   { href: "#quien", label: "Quién soy" },
   { href: "#servicios", label: "Servicios" },
+  { href: "#hydrapen", label: "Hydrapen" },
   { href: "#proceso", label: "Cómo funciona" },
   { href: "#testimonios", label: "Testimonios" },
 ];
