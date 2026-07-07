@@ -4,6 +4,7 @@ import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import FeatureStrip from "@/components/FeatureStrip";
 import Services from "@/components/Services";
+import Hydrapen from "@/components/Hydrapen";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -25,6 +26,7 @@ export default function Home() {
         <About />
         <FeatureStrip />
         <Services />
+        <Hydrapen />
         <Process />
         <Testimonials />
         <CTA />
