@@ -8,7 +8,6 @@ interface Service {
   desc: string;
   price?: string | string[];
   wa: string;
-  img?: string;
   badge?: string;
 }
 
@@ -45,7 +44,6 @@ const faciales: Service[] = [
     name: "Dermaplaning",
     desc: "Bisturí quirúrgico para afeitar suavemente la piel, eliminando vellitos y piel muerta. Piel de porcelana en una sesión, sin dolor ni recuperación.",
     price: "$44.000",
-    img: "/images/tratamientos/dermaplaning.jpg",
     wa: `${WA_BASE}Hola%20Caro!%20Me%20interesa%20el%20Dermaplaning%20%F0%9F%8C%BF`,
   },
   {
@@ -88,7 +86,6 @@ const faciales: Service[] = [
     name: "Peeling Enzimático",
     desc: "Exfoliación suave que no agrede la barrera cutánea. Ideal para pieles sensibles, primeros peelings y mantener la piel saludable, dejándola más suave y luminosa.",
     price: "$65.000",
-    img: "/images/tratamientos/peeling-enzimatico.jpg",
     badge: "Nuevo",
     wa: wa("Hola Caro! Me interesa el Peeling Enzimático 🌿"),
   },
@@ -96,7 +93,6 @@ const faciales: Service[] = [
     name: "Yellow Peel Retinol",
     desc: "Uno de los tratamientos más completos: renovación intensa que mejora manchas y reduce líneas finas, estimulando la regeneración de la piel.",
     price: "$70.000",
-    img: "/images/tratamientos/yellow-peel-retinol.jpg",
     badge: "Nuevo",
     wa: wa("Hola Caro! Me interesa el Yellow Peel Retinol 🌿"),
   },
@@ -104,7 +100,6 @@ const faciales: Service[] = [
     name: "Acno Reparador",
     desc: "Pensado para acné activo, marcas post acné y poros dilatados. Mejora la textura de la piel y acompaña el tratamiento de las imperfecciones.",
     price: "$65.000",
-    img: "/images/tratamientos/acno-reparador.jpg",
     badge: "Nuevo",
     wa: wa("Hola Caro! Me interesa el tratamiento Acno Reparador 🌿"),
   },
@@ -112,7 +107,6 @@ const faciales: Service[] = [
     name: "Miami Peel",
     desc: "Ideal para manchas, textura irregular y signos de fotoenvejecimiento. Promueve una renovación profunda para un rostro más uniforme.",
     price: "$67.000",
-    img: "/images/tratamientos/miami-peel.jpg",
     badge: "Nuevo",
     wa: wa("Hola Caro! Me interesa el Miami Peel 🌿"),
   },
@@ -120,7 +114,6 @@ const faciales: Service[] = [
     name: "Peeling Shine",
     desc: "Para más luminosidad, tono uniforme y piel apagada o cansada. Renueva la piel suavemente, devolviendo brillo desde las primeras sesiones.",
     price: "$67.000",
-    img: "/images/tratamientos/peeling-shine.jpg",
     badge: "Nuevo",
     wa: wa("Hola Caro! Me interesa el Peeling Shine 🌿"),
   },
@@ -195,18 +188,6 @@ function ServiceCard({ s }: { s: Service }) {
         (e.currentTarget as HTMLElement).style.background = "#fff";
       }}
     >
-      {s.img && (
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/5" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={s.img}
-            alt={s.name}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      )}
-
       <div className="p-7 flex flex-col flex-1 relative">
         {s.badge && (
           <span
