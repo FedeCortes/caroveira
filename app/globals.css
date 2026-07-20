@@ -90,10 +90,6 @@ body {
 }
 .testimonial-track         { animation: testimonial-scroll linear infinite; }
 .testimonial-track-reverse { animation: testimonial-scroll-reverse linear infinite; }
-.testimonial-row:hover .testimonial-track,
-.testimonial-row:hover .testimonial-track-reverse {
-  animation-play-state: paused;
-}
 
 /* ── Scroll reveal ── */
 ._rev-hidden {

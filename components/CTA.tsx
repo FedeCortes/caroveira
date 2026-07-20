@@ -78,7 +78,7 @@ export default function CTA() {
             className="text-[.98rem] leading-[1.88] max-w-[340px] mx-auto mb-10"
             style={{ color: "var(--color-mid)" }}
           >
-            Sin protocolos genéricos. Solo resultados reales,
+            Resultados reales,
             <br />
             diseñados para tu piel. Crazy Studio, Tigre.
           </p>
