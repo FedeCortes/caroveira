@@ -11,7 +11,6 @@ const chips = [
   "Manchas",
   "K-Beauty",
   "Aparatología",
-  "Micropigmentación",
 ];
 
 export default function About() {
