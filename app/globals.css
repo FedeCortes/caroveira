@@ -79,6 +79,22 @@ body {
 }
 .marquee-track { animation: marquee 32s linear infinite; }
 
+/* ── Testimonial carousel ── */
+@keyframes testimonial-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes testimonial-scroll-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+.testimonial-track         { animation: testimonial-scroll linear infinite; }
+.testimonial-track-reverse { animation: testimonial-scroll-reverse linear infinite; }
+.testimonial-row:hover .testimonial-track,
+.testimonial-row:hover .testimonial-track-reverse {
+  animation-play-state: paused;
+}
+
 /* ── Scroll reveal ── */
 ._rev-hidden {
   opacity: 0;
