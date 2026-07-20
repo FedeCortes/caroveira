@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="flex flex-1">
 
           {/* ── Content ── */}
-          <div className="flex-1 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-12 max-w-3xl relative z-10">
+          <div className="flex-1 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-12 max-w-5xl relative z-10">
 
             {/* Badge */}
             <span
