@@ -36,7 +36,7 @@ export default function Testimonials() {
         <Reveal>
           <div className="flex items-center gap-4 mb-10">
             <span
-              className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.1em] uppercase px-4 py-[.4rem]"
+              className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
                 background: "var(--color-blush-lt)",
                 color: "var(--color-blush-deep)",
@@ -53,7 +53,7 @@ export default function Testimonials() {
         <Reveal delay={0.1}>
           <h2
             className="font-serif leading-[1.1] mb-12"
-            style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 400 }}
+            style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 700 }}
           >
             Pieles{" "}
             <em className="italic" style={{ color: "var(--color-blush-deep)" }}>
@@ -116,7 +116,7 @@ export default function Testimonials() {
                 {/* Attribution */}
                 <div className="flex items-center justify-between">
                   <p
-                    className="text-[.65rem] font-medium tracking-[.1em] uppercase"
+                    className="text-[.65rem] font-semibold tracking-[.08em] uppercase"
                     style={{ color: "var(--color-muted)" }}
                   >
                     {r.name}

@@ -43,7 +43,7 @@ export default function CTA() {
       <div className="relative z-10 max-w-xl mx-auto">
         <Reveal>
           <span
-            className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.08em] uppercase mb-7 px-4 py-[.4rem]"
+            className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase mb-7 px-4 py-[.4rem]"
             style={{
               background: "rgba(201,125,102,0.14)",
               color: "var(--color-blush-deep)",
@@ -60,7 +60,7 @@ export default function CTA() {
             className="font-serif leading-[1.06] mb-5"
             style={{
               fontSize: "clamp(2.4rem, 6.5vw, 4.2rem)",
-              fontWeight: 400,
+              fontWeight: 700,
               color: "var(--color-deep)",
             }}
           >
@@ -75,7 +75,7 @@ export default function CTA() {
 
         <Reveal delay={0.18}>
           <p
-            className="text-[.9rem] leading-[1.88] max-w-[340px] mx-auto mb-10"
+            className="text-[.98rem] leading-[1.88] max-w-[340px] mx-auto mb-10"
             style={{ color: "var(--color-mid)" }}
           >
             Sin protocolos genéricos. Solo resultados reales,
@@ -90,8 +90,13 @@ export default function CTA() {
               href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-[.73rem] tracking-[.12em] uppercase px-8 py-4 transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90"
-              style={{ background: "var(--color-deep)", color: "#fff" }}
+              className="inline-flex items-center justify-center gap-2 text-[.8rem] font-semibold tracking-[.08em] uppercase px-9 py-[1.15rem] transition-all duration-300 hover:-translate-y-[3px]"
+              style={{
+                background: "var(--color-deep)",
+                color: "#fff",
+                borderRadius: "999px",
+                boxShadow: "0 10px 28px -10px rgba(28,20,18,0.45)",
+              }}
             >
               Escribime por WhatsApp
             </a>
@@ -99,11 +104,12 @@ export default function CTA() {
               href={IG}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-[.73rem] tracking-[.12em] uppercase px-8 py-4 border transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 text-[.8rem] font-semibold tracking-[.08em] uppercase px-9 py-[1.15rem] border-2 transition-all duration-300 hover:-translate-y-[3px]"
               style={{
                 color: "var(--color-mid)",
                 borderColor: "var(--color-border)",
                 background: "rgba(255,255,255,0.5)",
+                borderRadius: "999px",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement;

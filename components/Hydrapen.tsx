@@ -28,7 +28,7 @@ export default function Hydrapen() {
           <div className="order-2 md:order-1">
             <Reveal>
               <span
-                className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.1em] uppercase mb-6 px-4 py-[.4rem]"
+                className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase mb-6 px-4 py-[.4rem]"
                 style={{
                   background: "var(--color-gold-pale)",
                   color: "var(--color-gold)",
@@ -43,7 +43,7 @@ export default function Hydrapen() {
             <Reveal delay={0.1}>
               <h2
                 className="font-serif leading-[1.1] mb-6"
-                style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 400 }}
+                style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 700 }}
               >
                 Conocé{" "}
                 <em className="italic" style={{ color: "var(--color-blush-deep)" }}>
@@ -54,7 +54,7 @@ export default function Hydrapen() {
 
             <Reveal delay={0.2}>
               <div
-                className="text-[.9rem] leading-[1.95] space-y-3 mb-7"
+                className="text-[.98rem] leading-[1.95] space-y-3 mb-7"
                 style={{ color: "var(--color-mid)" }}
               >
                 <p>
@@ -95,8 +95,12 @@ export default function Hydrapen() {
                 href={WA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[.73rem] tracking-[.12em] uppercase text-white px-7 py-4 transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90"
-                style={{ background: "var(--color-deep)" }}
+                className="inline-flex items-center gap-2 text-[.8rem] font-semibold tracking-[.08em] uppercase text-white px-9 py-[1.1rem] transition-all duration-300 hover:-translate-y-[3px]"
+                style={{
+                  background: "var(--color-deep)",
+                  borderRadius: "999px",
+                  boxShadow: "0 10px 28px -10px rgba(28,20,18,0.45)",
+                }}
               >
                 Consultar por Hydrapen
               </a>

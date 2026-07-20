@@ -26,7 +26,7 @@ export default function About() {
         <Reveal>
           <div className="flex items-center gap-4 mb-12">
             <span
-              className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.1em] uppercase px-4 py-[.4rem]"
+              className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
                 background: "var(--color-blush-lt)",
                 color: "var(--color-blush-deep)",
@@ -46,7 +46,7 @@ export default function About() {
               className="font-serif leading-[1.1] mb-6"
               style={{
                 fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
-                fontWeight: 400,
+                fontWeight: 700,
               }}
             >
               Amor, ciencia y
@@ -63,7 +63,7 @@ export default function About() {
 
           <Reveal delay={0.2}>
             <div
-              className="text-[.9rem] leading-[1.95] space-y-3 mb-7"
+              className="text-[.98rem] leading-[1.95] space-y-3 mb-7"
               style={{ color: "var(--color-mid)" }}
             >
               <p>
@@ -117,8 +117,12 @@ export default function About() {
               href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[.73rem] tracking-[.12em] uppercase text-white px-7 py-4 transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90"
-              style={{ background: "var(--color-deep)" }}
+              className="inline-flex items-center gap-2 text-[.8rem] font-semibold tracking-[.08em] uppercase text-white px-9 py-[1.1rem] transition-all duration-300 hover:-translate-y-[3px]"
+              style={{
+                background: "var(--color-deep)",
+                borderRadius: "999px",
+                boxShadow: "0 10px 28px -10px rgba(28,20,18,0.45)",
+              }}
             >
               Agendá tu turno
             </a>

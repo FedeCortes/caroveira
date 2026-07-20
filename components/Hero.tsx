@@ -48,7 +48,7 @@ export default function Hero() {
 
             {/* Badge */}
             <span
-              className="inline-flex items-center gap-[6px] text-[.78rem] font-medium tracking-[.08em] uppercase mb-8 px-4 py-[.45rem]"
+              className="inline-flex items-center gap-[6px] text-[.78rem] font-semibold tracking-[.08em] uppercase mb-8 px-4 py-[.45rem]"
               style={{
                 background: "var(--color-blush-lt)",
                 color: "var(--color-blush-deep)",
@@ -67,7 +67,7 @@ export default function Hero() {
               className="font-serif leading-[1.02] mb-7"
               style={{
                 fontSize: "clamp(3.4rem, 11vw, 7.5rem)",
-                fontWeight: 400,
+                fontWeight: 700,
                 color: "var(--color-deep)",
               }}
             >
@@ -97,7 +97,7 @@ export default function Hero() {
 
             {/* Description */}
             <p
-              className="text-[.9rem] leading-[1.95] max-w-[370px] mb-9"
+              className="text-[.98rem] leading-[1.95] max-w-[370px] mb-9"
               style={{ color: "var(--color-muted)" }}
             >
               Especialista en piel acneica y glow skin. Tecnología de vanguardia
@@ -110,17 +110,23 @@ export default function Hero() {
                 href={WA_EVAL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center text-[.73rem] tracking-[.12em] uppercase px-8 py-[1.05rem] transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90"
-                style={{ background: "var(--color-deep)", color: "#fff" }}
+                className="inline-flex items-center justify-center text-[.8rem] font-semibold tracking-[.08em] uppercase px-9 py-[1.15rem] transition-all duration-300 hover:-translate-y-[3px]"
+                style={{
+                  background: "var(--color-deep)",
+                  color: "#fff",
+                  borderRadius: "999px",
+                  boxShadow: "0 10px 28px -10px rgba(28,20,18,0.45)",
+                }}
               >
                 Agendá tu evaluación
               </a>
               <a
                 href="#servicios"
-                className="inline-flex items-center justify-center text-[.73rem] tracking-[.12em] uppercase px-8 py-[1.05rem] border transition-all duration-300 hover:border-[var(--color-blush-deep)] hover:text-[var(--color-blush-deep)]"
+                className="inline-flex items-center justify-center text-[.8rem] font-semibold tracking-[.08em] uppercase px-9 py-[1.15rem] border-2 transition-all duration-300 hover:-translate-y-[3px] hover:border-[var(--color-blush-deep)] hover:text-[var(--color-blush-deep)]"
                 style={{
                   color: "var(--color-mid)",
                   borderColor: "var(--color-border)",
+                  borderRadius: "999px",
                 }}
               >
                 Ver servicios

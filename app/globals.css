@@ -2,17 +2,17 @@
 
 /* ── Design tokens ── */
 @theme {
-  --font-serif: var(--font-playfair, "Playfair Display", Georgia, serif);
-  --font-sans:  var(--font-dm, "DM Sans", system-ui, sans-serif);
+  --font-serif: var(--font-poppins, "Poppins", system-ui, sans-serif);
+  --font-sans:  var(--font-poppins, "Poppins", system-ui, sans-serif);
 
   /* Blush / rose — primary accent */
-  --color-blush:      #E8B8A8;
+  --color-blush:      #E5A594;
   --color-blush-lt:   #F5DDD6;
   --color-blush-pale: #FBF0EB;
-  --color-blush-deep: #C97D66;
+  --color-blush-deep: #BF5A3E;
 
   /* Gold — secondary premium accent */
-  --color-gold:       #C9922A;
+  --color-gold:       #B87F1E;
   --color-gold-pale:  #EDD9A3;
   --color-gold-xp:    #FBF5E9;
 

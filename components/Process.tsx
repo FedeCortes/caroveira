@@ -42,7 +42,7 @@ export default function Process() {
         <Reveal>
           <div className="flex items-center gap-4 mb-10">
             <span
-              className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.1em] uppercase px-4 py-[.4rem]"
+              className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
                 background: "rgba(232,184,168,0.12)",
                 color: "var(--color-blush)",
@@ -59,7 +59,7 @@ export default function Process() {
         <Reveal delay={0.1}>
           <h2
             className="font-serif text-white leading-[1.1] mb-14"
-            style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 400 }}
+            style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 700 }}
           >
             Sacar turno es{" "}
             <em className="italic" style={{ color: "var(--color-blush)" }}>
@@ -129,10 +129,12 @@ export default function Process() {
               href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[.73rem] tracking-[.12em] uppercase px-8 py-4 transition-all duration-300 hover:-translate-y-[2px]"
+              className="inline-flex items-center gap-2 text-[.8rem] font-semibold tracking-[.08em] uppercase px-9 py-[1.1rem] transition-all duration-300 hover:-translate-y-[3px]"
               style={{
                 background: "var(--color-blush-deep)",
                 color: "#fff",
+                borderRadius: "999px",
+                boxShadow: "0 10px 28px -10px rgba(191,90,62,0.5)",
               }}
             >
               Escribime ahora

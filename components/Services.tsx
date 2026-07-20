@@ -226,7 +226,7 @@ function ServiceCard({
           {/* Mobile-only badge (name + close live in the header above) */}
           {s.badge && (
             <span
-              className="sm:hidden inline-block mb-3 text-[.62rem] font-medium tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
+              className="sm:hidden inline-block mb-3 text-[.62rem] font-semibold tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
               style={{
                 background: isComingSoon ? "var(--color-sage)" : "var(--color-gold)",
                 color: "#fff",
@@ -248,7 +248,7 @@ function ServiceCard({
             <div className="flex items-center gap-2 shrink-0">
               {s.badge && (
                 <span
-                  className="text-[.62rem] font-medium tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
+                  className="text-[.62rem] font-semibold tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
                   style={{
                     background: isComingSoon
                       ? "var(--color-sage)"
@@ -382,7 +382,7 @@ export default function Services() {
         <Reveal>
           <div className="flex items-center gap-4 mb-10">
             <span
-              className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.1em] uppercase px-4 py-[.4rem]"
+              className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
                 background: "var(--color-blush-lt)",
                 color: "var(--color-blush-deep)",
@@ -399,7 +399,7 @@ export default function Services() {
         <Reveal delay={0.1}>
           <h2
             className="font-serif leading-[1.1] mb-4"
-            style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 400 }}
+            style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 700 }}
           >
             Tratamientos para{" "}
             <em className="italic" style={{ color: "var(--color-blush-deep)" }}>
@@ -450,7 +450,7 @@ export default function Services() {
                     setCat(c.key);
                     setOpenKey(null);
                   }}
-                  className="px-5 py-[.55rem] text-[.67rem] tracking-[.1em] uppercase transition-all duration-300"
+                  className="px-5 py-[.6rem] text-[.7rem] font-semibold tracking-[.08em] uppercase transition-all duration-300"
                   style={{
                     background: isActive
                       ? "var(--color-deep)"

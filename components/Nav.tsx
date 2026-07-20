@@ -83,10 +83,11 @@ export default function Nav() {
             href={WA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-block text-[.67rem] tracking-[.1em] uppercase px-5 py-[.55rem] border transition-all duration-250"
+            className="hidden md:inline-block text-[.72rem] font-semibold tracking-[.08em] uppercase px-6 py-[.65rem] border-2 transition-all duration-250"
             style={{
               color: "var(--color-deep)",
               borderColor: "var(--color-border)",
+              borderRadius: "999px",
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLElement;
@@ -167,8 +168,8 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="mt-9 text-white text-[.72rem] tracking-[.12em] uppercase px-8 py-4 transition-all"
-              style={{ background: "var(--color-deep)" }}
+              className="mt-9 text-white text-[.78rem] font-semibold tracking-[.08em] uppercase px-9 py-[1.1rem] transition-all"
+              style={{ background: "var(--color-deep)", borderRadius: "999px" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.38 }}

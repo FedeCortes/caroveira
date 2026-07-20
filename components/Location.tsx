@@ -19,7 +19,7 @@ export default function Location() {
         <Reveal>
           <div className="flex items-center gap-4 mb-10">
             <span
-              className="inline-flex items-center gap-2 text-[.75rem] font-medium tracking-[.1em] uppercase px-4 py-[.4rem]"
+              className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
                 background: "var(--color-blush-lt)",
                 color: "var(--color-blush-deep)",
@@ -40,7 +40,7 @@ export default function Location() {
             <Reveal delay={0.1}>
               <h2
                 className="font-serif leading-[1.1] mb-5"
-                style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)", fontWeight: 400 }}
+                style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)", fontWeight: 700 }}
               >
                 Te espero en{" "}
                 <em className="italic" style={{ color: "var(--color-blush-deep)" }}>
@@ -51,7 +51,7 @@ export default function Location() {
 
             <Reveal delay={0.18}>
               <p
-                className="text-[.9rem] leading-[1.9] mb-7 max-w-[340px]"
+                className="text-[.98rem] leading-[1.9] mb-7 max-w-[340px]"
                 style={{ color: "var(--color-mid)" }}
               >
                 Av. Santa María 2701, Tigre, Provincia de Buenos Aires.
@@ -63,8 +63,12 @@ export default function Location() {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[.73rem] tracking-[.12em] uppercase text-white px-7 py-4 transition-all duration-300 hover:-translate-y-[2px] hover:opacity-90"
-                style={{ background: "var(--color-deep)" }}
+                className="inline-flex items-center gap-2 text-[.8rem] font-semibold tracking-[.08em] uppercase text-white px-9 py-[1.1rem] transition-all duration-300 hover:-translate-y-[3px]"
+                style={{
+                  background: "var(--color-deep)",
+                  borderRadius: "999px",
+                  boxShadow: "0 10px 28px -10px rgba(28,20,18,0.45)",
+                }}
               >
                 Cómo llegar →
               </a>
