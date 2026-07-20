@@ -9,7 +9,7 @@ const features = [
   {
     num: "02",
     title: "Tecnología",
-    desc: "Radiofrecuencia, Frax, Dermapen, Luz Pulsada y más.",
+    desc: "Radiofrecuencia, Frax, Dermapen, Hydrapen y más.",
   },
   {
     num: "03",

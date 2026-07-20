@@ -1,3 +1,5 @@
+"use client";
+
 import Reveal from "./ui/Reveal";
 
 const WA =
@@ -69,48 +71,52 @@ export default function Process() {
         {/* Steps */}
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-0"
-          style={{ borderTop: "1px solid rgba(232,184,168,0.1)" }}
+          style={{ borderTop: "1px solid rgba(232,184,168,0.16)" }}
         >
           {steps.map((s, i) => (
-            <Reveal key={s.num} delay={0.2 + i * 0.12} className="flex-1">
+            <Reveal key={s.num} delay={0.2 + i * 0.12}>
               <div
-                className="py-8 md:pr-10"
-                style={{
-                  borderBottom:
-                    i < steps.length - 1
-                      ? "1px solid rgba(232,184,168,0.07)"
-                      : "none",
-                  borderRight: "none",
+                className={`h-full py-9 px-2 md:px-8 transition-colors duration-300 ${
+                  i < steps.length - 1 ? "border-b md:border-b-0 md:border-r" : ""
+                }`}
+                style={{ borderColor: "rgba(232,184,168,0.16)" }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.background =
+                    "rgba(255,255,255,0.025)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.background =
+                    "transparent";
                 }}
               >
-                <div className="flex md:flex-col gap-5 md:gap-4">
-                  {/* Number */}
+                {/* Number badge */}
+                <div
+                  className="flex items-center justify-center w-12 h-12 mb-6"
+                  style={{
+                    border: "1px solid rgba(232,184,168,0.4)",
+                    borderRadius: "999px",
+                  }}
+                >
                   <span
-                    className="font-serif italic leading-none flex-shrink-0"
-                    style={{
-                      fontSize: "clamp(3rem, 7vw, 4.5rem)",
-                      color: "rgba(232,184,168,0.12)",
-                      minWidth: "2.5rem",
-                    }}
+                    className="font-serif italic text-[1.1rem]"
+                    style={{ color: "var(--color-blush)" }}
                   >
                     {s.num}
                   </span>
-
-                  <div className="pt-1 md:pt-0">
-                    <p
-                      className="text-[.85rem] font-medium mb-2"
-                      style={{ color: "#fff" }}
-                    >
-                      {s.title}
-                    </p>
-                    <p
-                      className="text-[.76rem] leading-[1.85]"
-                      style={{ color: "rgba(255,255,255,.28)" }}
-                    >
-                      {s.desc}
-                    </p>
-                  </div>
                 </div>
+
+                <p
+                  className="text-[.95rem] font-medium mb-3"
+                  style={{ color: "#fff" }}
+                >
+                  {s.title}
+                </p>
+                <p
+                  className="text-[.8rem] leading-[1.85]"
+                  style={{ color: "rgba(255,255,255,.62)" }}
+                >
+                  {s.desc}
+                </p>
               </div>
             </Reveal>
           ))}
