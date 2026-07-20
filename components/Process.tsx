@@ -19,7 +19,7 @@ const steps = [
   {
     num: "3",
     title: "Tu piel se transforma",
-    desc: "Comenzamos el tratamiento y hacemos seguimiento en cada sesión. La diferencia se siente.",
+    desc: "Comenzamos el tratamiento y hacemos seguimiento en cada sesión.",
   },
 ];
 

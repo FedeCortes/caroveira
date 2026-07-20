@@ -63,10 +63,8 @@ export default function Hydrapen() {
                   activos hasta 5 veces más que la aplicación manual.
                 </p>
                 <p>
-                  Combina microagujas con un contenedor de suero, con
-                  cobertura automática de 360°, facilitando tratamientos de
-                  rejuvenecimiento, hidratación, reducción de poros y
-                  cicatrices de acné — con resultados visibles desde las
+                  Combina microagujas con un contenedor de suero y cobertura
+                  automática de 360°, con resultados visibles desde las
                   primeras sesiones.
                 </p>
               </div>

@@ -5,19 +5,19 @@ import Reveal from "./ui/Reveal";
 const reviews = [
   {
     quote:
-      "Empecé con muchísimo acné y en pocas sesiones mi piel cambió completamente. Los resultados hablan solos.",
+      "Empecé con muchísimo acné y en pocas sesiones ya se notaba un montón el cambio. La verdad no lo podía creer.",
     name: "Valentina M.",
     tag: "Piel acneica",
   },
   {
     quote:
-      "Tenía manchas de sol que no me iban con nada. Con el protocolo de Caro ya se notan muchísimo menos.",
+      "Tenía manchas de sol que no se me iban con nada. Después de unas sesiones con Caro ya se notan muchísimo menos.",
     name: "Sofía R.",
     tag: "Manchas",
   },
   {
     quote:
-      "El glass skin fue lo mejor que pude hacer por mi piel. Salí con una luminosidad que jamás tuve. Súper recomendada.",
+      "Me hice el glass skin y salí con una luminosidad que nunca había tenido. La piel quedó como cristal, en serio.",
     name: "Lucía P.",
     tag: "Glass Skin",
   },
@@ -29,7 +29,7 @@ const reviews = [
   },
   {
     quote:
-      "En mi vida me había levantado con la cara tan linda. Y los labios también. ¡Gracias!",
+      "En mi vida me había levantado con la cara tan linda. Y los labios también. Gracias 🤍",
     name: "Sofía G.",
     tag: "Glow skin",
   },

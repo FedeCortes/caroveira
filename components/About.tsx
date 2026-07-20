@@ -74,12 +74,11 @@ export default function About() {
               <p>
                 Combino tecnología de última generación con los activos más
                 poderosos de la cosmética coreana para diseñar protocolos
-                reales, personalizados y con resultados que duran.
+                personalizados, con resultados que duran.
               </p>
               <p>
                 Atiendo en Crazy Studio, Tigre. Cada turno empieza con una
-                evaluación profunda: sin suposiciones, sin protocolos
-                genéricos.
+                evaluación profunda de tu piel.
               </p>
             </div>
           </Reveal>
