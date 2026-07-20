@@ -144,35 +144,6 @@ const categories: Category[] = [
       },
     ],
   },
-  {
-    key: "corporales",
-    label: "Corporales",
-    services: [
-      {
-        name: "Camuflaje de Estrías",
-        desc: "Micropigmentación correctiva para disimular y unificar el tono en zonas con estrías.",
-        price: ["Zona pequeña $39.000", "Zona mediana $69.000"],
-        wa: wa("Hola Caro! Me interesa Camuflaje de Estrías 🌿"),
-      },
-      {
-        name: "Lipo Láser",
-        desc: "Tratamiento no invasivo que reduce grasa localizada y ayuda a moldear la silueta.",
-        price: "$15.000 por zona",
-        wa: wa("Hola Caro! Me interesa Lipo Láser 🌿"),
-      },
-      {
-        name: "Frax Corporal",
-        desc: "Tecnología fraccionada que estimula colágeno y elastina. Ideal para estrías, cicatrices y flacidez.",
-        price: [
-          "Muslos $39.000",
-          "Glúteos $69.000",
-          "Espalda $69.000",
-          "Abdomen $39.000",
-        ],
-        wa: wa("Hola Caro! Me interesa Frax Corporal 🌿"),
-      },
-    ],
-  },
 ];
 
 function ServiceCard({
@@ -190,19 +161,27 @@ function ServiceCard({
 
   return (
     <div
-      className="relative bg-white cursor-pointer select-none"
+      className="relative bg-white select-none"
       style={{
         minHeight: "98px",
         border: `1px solid ${active ? "var(--color-blush)" : "var(--color-border-lt)"}`,
         transform: active ? "translateY(-3px)" : "translateY(0)",
         transition: "border-color 300ms ease, transform 300ms ease",
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onClick={onToggle}
+      onPointerEnter={(e) => {
+        if (e.pointerType === "mouse") setHovered(true);
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === "mouse") setHovered(false);
+      }}
     >
-      {/* Collapsed: name + expand indicator */}
-      <div className="pl-6 pr-5 py-6 flex items-center justify-between gap-4 h-full">
+      {/* Collapsed: name + expand indicator — tapping this opens the card */}
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="w-full text-left pl-6 pr-5 py-6 flex items-center justify-between gap-4 h-full cursor-pointer"
+      >
         <p
           className="text-[.95rem] font-semibold leading-snug"
           style={{ color: "var(--color-deep)" }}
@@ -223,29 +202,33 @@ function ServiceCard({
         >
           +
         </span>
-      </div>
+      </button>
 
-      {/* Expanded overlay: desc, price, badge, WhatsApp CTA */}
+      {/*
+        Mobile (<sm): accordion — grows inline and pushes the next card
+        down, so nothing ever gets covered. The collapsed header above
+        stays visible and its rotated "+" doubles as the close control.
+        Desktop (sm+): floating overlay above the row below, with its
+        own header (name, badge, explicit × close button).
+      */}
       <div
-        className="absolute left-0 right-0 top-0 z-30 bg-white"
-        style={{
-          border: "1px solid var(--color-blush)",
-          boxShadow: "0 20px 44px -16px rgba(28,20,18,.24)",
-          opacity: active ? 1 : 0,
-          visibility: active ? "visible" : "hidden",
-          transform: active ? "translateY(0)" : "translateY(-6px)",
-          pointerEvents: active ? "auto" : "none",
-          transition: "opacity 300ms ease, transform 300ms ease",
-        }}
+        className={`overflow-hidden transition-all duration-300 ease-out border-t sm:border-t-0 sm:overflow-visible sm:absolute sm:left-0 sm:right-0 sm:top-0 sm:z-30 sm:bg-white ${
+          active
+            ? "max-h-[640px] opacity-100 sm:max-h-none sm:visible sm:translate-y-0 sm:pointer-events-auto"
+            : "max-h-0 opacity-0 sm:invisible sm:-translate-y-1.5 sm:pointer-events-none"
+        }`}
+        style={{ borderTopColor: "var(--color-border-lt)" }}
       >
-        <div className="p-7 relative">
+        <div
+          className="p-7 sm:border sm:shadow-[0_20px_44px_-16px_rgba(28,20,18,0.24)]"
+          style={{ borderColor: "var(--color-blush)" }}
+        >
+          {/* Mobile-only badge (name + close live in the header above) */}
           {s.badge && (
             <span
-              className="absolute top-4 right-4 text-[.62rem] font-medium tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
+              className="sm:hidden inline-block mb-3 text-[.62rem] font-medium tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
               style={{
-                background: isComingSoon
-                  ? "var(--color-sage)"
-                  : "var(--color-gold)",
+                background: isComingSoon ? "var(--color-sage)" : "var(--color-gold)",
                 color: "#fff",
                 borderRadius: "999px",
               }}
@@ -254,14 +237,49 @@ function ServiceCard({
             </span>
           )}
 
-          <p
-            className="text-[1rem] font-semibold mb-2 leading-snug pr-14"
-            style={{ color: "var(--color-deep)" }}
-          >
-            {s.name}
-          </p>
+          {/* Desktop-only header: name repeat + badge + explicit close */}
+          <div className="hidden sm:flex items-start justify-between gap-3 mb-2">
+            <p
+              className="text-[1rem] font-semibold leading-snug"
+              style={{ color: "var(--color-deep)" }}
+            >
+              {s.name}
+            </p>
+            <div className="flex items-center gap-2 shrink-0">
+              {s.badge && (
+                <span
+                  className="text-[.62rem] font-medium tracking-[.08em] uppercase px-[.6rem] py-[.25rem]"
+                  style={{
+                    background: isComingSoon
+                      ? "var(--color-sage)"
+                      : "var(--color-gold)",
+                    color: "#fff",
+                    borderRadius: "999px",
+                  }}
+                >
+                  {s.badge}
+                </span>
+              )}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onToggle();
+                }}
+                aria-label="Cerrar detalle"
+                className="flex items-center justify-center w-7 h-7 shrink-0 text-[.85rem] leading-none cursor-pointer"
+                style={{
+                  border: "1px solid var(--color-border-lt)",
+                  borderRadius: "999px",
+                  color: "var(--color-muted)",
+                }}
+              >
+                ×
+              </button>
+            </div>
+          </div>
           <div
-            className="h-px w-8 mb-3"
+            className="hidden sm:block h-px w-8 mb-3"
             style={{ background: "var(--color-blush)" }}
           />
           {s.desc && (
@@ -325,13 +343,21 @@ function ServiceCard({
 // Owns its own z-index so the expanded overlay can escape above the
 // card row below it — grid siblings otherwise paint in DOM order and
 // bury the overlay under the next row regardless of its own z-index.
-function ServiceCardSlot({ s, delay }: { s: Service; delay: number }) {
-  const [open, setOpen] = useState(false);
-
+function ServiceCardSlot({
+  s,
+  delay,
+  open,
+  onToggle,
+}: {
+  s: Service;
+  delay: number;
+  open: boolean;
+  onToggle: () => void;
+}) {
   return (
     <div className={`relative ${open ? "z-40" : "z-0"} hover:z-40`}>
       <Reveal delay={delay}>
-        <ServiceCard s={s} open={open} onToggle={() => setOpen((o) => !o)} />
+        <ServiceCard s={s} open={open} onToggle={onToggle} />
       </Reveal>
     </div>
   );
@@ -339,6 +365,9 @@ function ServiceCardSlot({ s, delay }: { s: Service; delay: number }) {
 
 export default function Services() {
   const [cat, setCat] = useState<string>(categories[0].key);
+  // Only one card open at a time — opening a new one closes whichever
+  // was open, so nothing overlaps or gets stuck on mobile.
+  const [openKey, setOpenKey] = useState<string | null>(null);
   const active = categories.find((c) => c.key === cat)!;
 
   return (
@@ -417,7 +446,10 @@ export default function Services() {
               return (
                 <button
                   key={c.key}
-                  onClick={() => setCat(c.key)}
+                  onClick={() => {
+                    setCat(c.key);
+                    setOpenKey(null);
+                  }}
                   className="px-5 py-[.55rem] text-[.67rem] tracking-[.1em] uppercase transition-all duration-300"
                   style={{
                     background: isActive
@@ -454,9 +486,20 @@ export default function Services() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {active.services.map((s, i) => (
-            <ServiceCardSlot key={`${cat}-${s.name}`} s={s} delay={i * 0.04} />
-          ))}
+          {active.services.map((s, i) => {
+            const key = `${cat}-${s.name}`;
+            return (
+              <ServiceCardSlot
+                key={key}
+                s={s}
+                delay={i * 0.04}
+                open={openKey === key}
+                onToggle={() =>
+                  setOpenKey((k) => (k === key ? null : key))
+                }
+              />
+            );
+          })}
         </div>
       </div>
     </section>

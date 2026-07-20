@@ -13,6 +13,11 @@ const links = [
     label: "WhatsApp",
     external: true,
   },
+  {
+    href: "https://maps.app.goo.gl/jWCmUY7T2b6cVShD7",
+    label: "Cómo llegar",
+    external: true,
+  },
 ];
 
 export default function Footer() {

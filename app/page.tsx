@@ -8,6 +8,7 @@ import Hydrapen from "@/components/Hydrapen";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
+import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 import FloatingWA from "@/components/FloatingWA";
 import Cursor from "@/components/Cursor";
@@ -30,6 +31,7 @@ export default function Home() {
         <Process />
         <Testimonials />
         <CTA />
+        <Location />
       </main>
       <Footer />
     </>

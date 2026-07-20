@@ -10,6 +10,7 @@ const links = [
   { href: "#hydrapen", label: "Hydrapen" },
   { href: "#proceso", label: "Cómo funciona" },
   { href: "#testimonios", label: "Testimonios" },
+  { href: "#ubicacion", label: "Ubicación" },
 ];
 
 const WA_URL =

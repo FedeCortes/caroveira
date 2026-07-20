@@ -41,10 +41,10 @@ export default function Hero() {
 
       {/* Layout */}
       <div className="flex flex-col flex-1 pt-[72px]">
-        <div className="flex flex-col md:flex-row flex-1">
+        <div className="flex flex-1">
 
-          {/* ── Left: content ── */}
-          <div className="flex-1 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-12 relative z-10">
+          {/* ── Content ── */}
+          <div className="flex-1 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-12 max-w-3xl relative z-10">
 
             {/* Badge */}
             <span
@@ -129,21 +129,21 @@ export default function Hero() {
 
             {/* Stats */}
             <div
-              className="grid grid-cols-3 mt-12 pt-7"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 mt-12 pt-7"
               style={{ borderTop: "1px solid var(--color-border)" }}
             >
               {[
                 { val: "K-beauty", lbl: "Cosmética coreana" },
                 { val: "Tigre", lbl: "Buenos Aires" },
                 { val: "100%", lbl: "Personalizado" },
+                { val: "+100", lbl: "Clientas 5★" },
               ].map((s, i) => (
                 <div
                   key={s.val}
-                  className="text-center py-2"
-                  style={{
-                    borderRight:
-                      i < 2 ? "1px solid var(--color-border)" : "none",
-                  }}
+                  className={`text-center py-2 ${
+                    i === 3 ? "" : i === 1 ? "sm:border-r" : "border-r"
+                  }`}
+                  style={{ borderColor: "var(--color-border)" }}
                 >
                   <span
                     className="block font-serif text-[1rem] mb-[.3rem]"
@@ -161,127 +161,6 @@ export default function Hero() {
               ))}
             </div>
           </div>
-
-          {/* ── Right: photo + floating cards ── */}
-          <div className="hidden md:flex items-center justify-center flex-[0_0_42%] relative z-10 py-20 pl-4 pr-20">
-            <div className="relative">
-
-              {/* Offset decorative frame */}
-              <div
-                className="absolute pointer-events-none z-0"
-                style={{
-                  inset: 0,
-                  transform: "translate(14px, 14px)",
-                  border: "1px solid var(--color-blush)",
-                }}
-              />
-
-              {/* Photo portrait */}
-              <div
-                className="relative overflow-hidden z-10"
-                style={{
-                  width: 290,
-                  aspectRatio: "3/4",
-                  background:
-                    "linear-gradient(160deg, var(--color-blush-lt) 0%, var(--color-blush-pale) 55%, var(--color-cream) 100%)",
-                }}
-              >
-                {/* Placeholder silhouette */}
-                <div className="absolute inset-0 flex items-end justify-center pb-16 opacity-[0.12]">
-                  <svg
-                    width="110"
-                    height="130"
-                    viewBox="0 0 24 28"
-                    fill="currentColor"
-                    style={{ color: "var(--color-blush-deep)" }}
-                  >
-                    <ellipse cx="12" cy="7" rx="5" ry="6" />
-                    <path d="M2 28c0-6 4.5-10.5 10-10.5S22 22 22 28Z" />
-                  </svg>
-                </div>
-
-                {/* Bottom caption */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 px-5 py-5"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(28,20,18,.72) 0%, transparent 100%)",
-                  }}
-                >
-                  <p className="font-serif text-white text-[1rem] mb-[3px]">
-                    Caro Veira
-                  </p>
-                  <p
-                    className="text-[.52rem] tracking-[.18em] uppercase"
-                    style={{ color: "var(--color-blush)" }}
-                  >
-                    Dermocosmiatra · Tigre, Bs As
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating card: social proof — top-left */}
-              <div
-                className="absolute z-20 flex items-center gap-3 px-4 py-[.75rem]"
-                style={{
-                  top: 28,
-                  left: -56,
-                  background: "#fff",
-                  boxShadow: "0 8px 32px rgba(28,20,18,0.09)",
-                }}
-              >
-                <div
-                  className="w-9 h-9 flex items-center justify-center flex-shrink-0"
-                  style={{
-                    background: "var(--color-blush-pale)",
-                    borderRadius: "50%",
-                  }}
-                >
-                  <span style={{ fontSize: ".9rem", lineHeight: 1, color: "var(--color-blush-deep)" }}>
-                    ★
-                  </span>
-                </div>
-                <div>
-                  <p
-                    className="text-[.8rem] font-semibold leading-none mb-[5px]"
-                    style={{ color: "var(--color-deep)" }}
-                  >
-                    +100 clientas
-                  </p>
-                  <p
-                    className="text-[.56rem] tracking-[.1em] uppercase"
-                    style={{ color: "var(--color-muted)" }}
-                  >
-                    Valoraciones 5★
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating pill: location — bottom-right */}
-              <div
-                className="absolute z-20 flex items-center gap-[7px] px-4 py-[.5rem]"
-                style={{
-                  bottom: 44,
-                  right: -22,
-                  background: "var(--color-deep)",
-                  borderRadius: "999px",
-                }}
-              >
-                <span
-                  className="w-[5px] h-[5px] rounded-full flex-shrink-0"
-                  style={{ background: "var(--color-blush)" }}
-                />
-                <span
-                  className="text-[.63rem] font-medium tracking-[.08em] uppercase"
-                  style={{ color: "#fff" }}
-                >
-                  Crazy Studio · Tigre
-                </span>
-              </div>
-
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

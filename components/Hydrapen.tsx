@@ -11,7 +11,6 @@ const benefits = [
   "Disminuye arrugas y líneas de expresión",
   "Reduce cicatrices de acné",
   "Disminuye poros dilatados",
-  "Reduce estrías",
   "Aporta hidratación intensiva",
   "Unifica el tono y aporta luminosidad",
 ];
