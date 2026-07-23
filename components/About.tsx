@@ -67,9 +67,10 @@ export default function About() {
               style={{ color: "var(--color-mid)" }}
             >
               <p>
-                Soy Caro, dermocosmiatra especializada en piel acneica y glow
-                skin. Me apasiona trabajar con cada piel como si fuera única —
-                porque lo es.
+                Soy Caro, dermocosmiatra especializada en glow skin,
+                reparación y mantenimiento de pieles reactivas, sensibles y
+                con condiciones, en especial acné y sus secuelas. Me apasiona
+                trabajar con cada piel como si fuera única — porque lo es.
               </p>
               <p>
                 Combino tecnología de última generación con los activos más
