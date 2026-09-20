@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="flex flex-1 items-center max-w-[1600px] w-full mx-auto">
 
           {/* ── Content ── */}
-          <div className="flex-1 min-w-0 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-10 relative z-10">
+          <div className="flex-1 min-w-0 flex flex-col justify-center px-6 pt-6 pb-14 md:py-14 md:pl-[7rem] md:pr-10 relative z-10">
 
             {/* Badge */}
             <span
@@ -71,7 +71,7 @@ export default function Hero() {
             <div
               className="md:hidden relative mb-7 overflow-hidden rounded-[28px]"
               style={{
-                aspectRatio: "4/5",
+                aspectRatio: "1/1",
                 boxShadow: "0 20px 44px -18px rgba(28,20,18,0.35)",
               }}
             >
