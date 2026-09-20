@@ -285,7 +285,7 @@ function ServiceCard({
           {s.desc && (
             <p
               className="text-[.85rem] leading-[1.75] mb-4"
-              style={{ color: "var(--color-muted)" }}
+              style={{ color: "var(--color-mid)" }}
             >
               {s.desc}
             </p>

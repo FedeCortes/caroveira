@@ -80,7 +80,7 @@ export default function Hero() {
                 src="/images/caro-veira.jpg"
                 alt="Caro Veira, dermocosmiatra"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: "top center" }}
+                style={{ objectPosition: "center bottom" }}
                 loading="eager"
               />
               <div
@@ -110,7 +110,7 @@ export default function Hero() {
             {/* Description */}
             <p
               className="text-[.98rem] leading-[1.95] max-w-[370px] mb-9"
-              style={{ color: "var(--color-muted)" }}
+              style={{ color: "var(--color-mid)" }}
             >
               Especialista en{" "}
               <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>

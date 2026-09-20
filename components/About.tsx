@@ -67,19 +67,36 @@ export default function About() {
               style={{ color: "var(--color-mid)" }}
             >
               <p>
-                Soy Caro, dermocosmiatra especializada en glow skin,
-                reparación y mantenimiento de pieles reactivas, sensibles y
-                con condiciones, en especial acné y sus secuelas. Me apasiona
-                trabajar con cada piel como si fuera única — porque lo es.
+                Soy Caro, dermocosmiatra especializada en{" "}
+                <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                  glow skin
+                </strong>
+                , reparación y mantenimiento de pieles reactivas, sensibles y
+                con condiciones, en especial{" "}
+                <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                  acné y sus secuelas
+                </strong>
+                . Me apasiona trabajar con cada piel como si fuera única —
+                porque lo es.
               </p>
               <p>
                 Combino tecnología de última generación con los activos más
-                poderosos de la cosmética coreana para diseñar protocolos
-                personalizados, con resultados que duran.
+                poderosos de la{" "}
+                <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                  cosmética coreana
+                </strong>{" "}
+                para diseñar{" "}
+                <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                  protocolos personalizados
+                </strong>
+                , con resultados que duran.
               </p>
               <p>
-                Atiendo en Crazy Studio, Tigre. Cada turno empieza con una
-                evaluación profunda de tu piel.
+                Atiendo en{" "}
+                <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                  Crazy Studio, Tigre
+                </strong>
+                . Cada turno empieza con una evaluación profunda de tu piel.
               </p>
             </div>
           </Reveal>

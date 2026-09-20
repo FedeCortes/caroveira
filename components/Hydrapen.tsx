@@ -60,12 +60,19 @@ export default function Hydrapen() {
                 <p>
                   Es un dispositivo avanzado de microneedling que automatiza la
                   aplicación de sueros, mejorando la absorción de principios
-                  activos hasta 5 veces más que la aplicación manual.
+                  activos{" "}
+                  <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                    hasta 5 veces más
+                  </strong>{" "}
+                  que la aplicación manual.
                 </p>
                 <p>
                   Combina microagujas con un contenedor de suero y cobertura
-                  automática de 360°, con resultados visibles desde las
-                  primeras sesiones.
+                  automática de 360°, con{" "}
+                  <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                    resultados visibles desde las primeras sesiones
+                  </strong>
+                  .
                 </p>
               </div>
             </Reveal>
