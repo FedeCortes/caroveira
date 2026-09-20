@@ -103,13 +103,7 @@ export default function Footer() {
         }}
       />
 
-      {/* Decorative glow, matches the Process section on the same dark background */}
-      <div
-        className="blob absolute left-[-10%] top-[-10%] w-[36%] h-[70%] pointer-events-none"
-        style={{ background: "rgba(232,184,168,0.05)" }}
-      />
-
-      <div className="max-w-6xl mx-auto px-6 md:px-16 py-12 md:py-16 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-16 pt-12 pb-24 md:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] gap-9 md:gap-12 mb-10 text-center md:text-left items-start">
 
           {/* Brand */}
@@ -171,7 +165,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 pt-7 text-center md:text-left"
+          className="flex flex-col md:flex-row items-center justify-between gap-4 pt-7 text-center md:text-left"
           style={{ borderTop: "1px solid rgba(232,184,168,0.12)" }}
         >
           <span

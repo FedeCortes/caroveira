@@ -8,46 +8,78 @@ const reviews = [
       "Empecé con muchísimo acné y en pocas sesiones ya se notaba un montón el cambio. La verdad no lo podía creer.",
     name: "Valentina M.",
     tag: "Piel acneica",
+    when: "2 sem",
   },
   {
     quote:
       "Tenía manchas de sol que no se me iban con nada. Después de unas sesiones con Caro ya se notan muchísimo menos.",
     name: "Sofía R.",
     tag: "Manchas",
+    when: "1 mes",
   },
   {
     quote:
       "Me hice el glass skin y salí con una luminosidad que nunca había tenido. La piel quedó como cristal, en serio.",
     name: "Lucía P.",
     tag: "Glass Skin",
+    when: "5 días",
   },
   {
     quote:
       "La verdad muchísimo mejor, me salen muy pocos granitos y ya no duelen. Lo único que tengo son las manchitas de los brotes anteriores.",
     name: "Camila P.",
     tag: "Piel acneica",
+    when: "3 sem",
   },
   {
     quote:
       "En mi vida me había levantado con la cara tan linda. Y los labios también. Gracias 🤍",
     name: "Sofía G.",
     tag: "Glow skin",
+    when: "1 sem",
   },
   {
     quote:
       "Hoy tengo la cara increíble. Lo de la frente bajó un montonazo, ya casi no tengo nada.",
     name: "Yael C.",
     tag: "Rejuvenecimiento",
+    when: "2 meses",
   },
+];
+
+const avatarColors = [
+  { bg: "var(--color-blush-lt)", fg: "var(--color-blush-deep)" },
+  { bg: "var(--color-gold-pale)", fg: "var(--color-gold)" },
+  { bg: "var(--color-sage-lt)", fg: "#4A6152" },
 ];
 
 const rowA = reviews.slice(0, 3);
 const rowB = reviews.slice(3, 6);
 
-function ReviewCard({ r }: { r: (typeof reviews)[number] }) {
+function VerifiedIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden>
+      <path
+        d="M12 2l2.4 1.9 3-.6 1 2.9 2.9 1-.6 3L22.6 12l-1.9 2.4.6 3-2.9 1-1 2.9-3-.6L12 22.6l-2.4-1.9-3 .6-1-2.9-2.9-1 .6-3L1.4 12l1.9-2.4-.6-3 2.9-1 1-2.9 3 .6L12 2z"
+        fill="#4AA3E0"
+      />
+      <path
+        d="M8.3 12.3l2.4 2.4 5-5"
+        fill="none"
+        stroke="#fff"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ReviewCard({ r, i }: { r: (typeof reviews)[number]; i: number }) {
+  const avatar = avatarColors[i % avatarColors.length];
   return (
     <div
-      className="shrink-0 w-[300px] sm:w-[360px] mx-[10px] p-7 transition-all duration-300 relative"
+      className="shrink-0 w-[300px] sm:w-[340px] mx-[10px] p-6 transition-all duration-300 relative"
       style={{
         background: "var(--color-cream)",
         border: "1px solid var(--color-border-lt)",
@@ -65,50 +97,46 @@ function ReviewCard({ r }: { r: (typeof reviews)[number] }) {
         el.style.boxShadow = "none";
       }}
     >
-      {/* Decorative quote mark */}
-      <div
-        className="leading-none mb-4 select-none"
-        style={{ fontSize: "3rem", color: "var(--color-blush-lt)", lineHeight: 1 }}
-        aria-hidden
-      >
-        &ldquo;
+      {/* Header: avatar, name + verified, stars */}
+      <div className="flex items-center gap-3 mb-3">
+        <div
+          className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-semibold text-[.85rem]"
+          style={{ background: avatar.bg, color: avatar.fg }}
+        >
+          {r.name.charAt(0)}
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-[5px]">
+            <span
+              className="text-[.85rem] font-semibold truncate"
+              style={{ color: "var(--color-deep)" }}
+            >
+              {r.name}
+            </span>
+            <VerifiedIcon />
+          </div>
+          <p
+            className="text-[.68rem] truncate"
+            style={{ color: "var(--color-muted)" }}
+          >
+            {r.tag} · {r.when}
+          </p>
+        </div>
+        <span
+          className="flex-shrink-0"
+          style={{ color: "var(--color-blush-deep)", fontSize: ".72rem", letterSpacing: "1px" }}
+        >
+          ★★★★★
+        </span>
       </div>
 
-      {/* Stars */}
-      <p
-        className="text-[.68rem] tracking-[.1em] mb-4"
-        style={{ color: "var(--color-blush-deep)" }}
-      >
-        ★★★★★
-      </p>
-
       {/* Quote */}
-      <blockquote
-        className="italic text-[.96rem] leading-[1.78] mb-6"
+      <p
+        className="text-[.92rem] leading-[1.7]"
         style={{ color: "var(--color-deep)" }}
       >
         {r.quote}
-      </blockquote>
-
-      {/* Attribution */}
-      <div className="flex items-center justify-between">
-        <p
-          className="text-[.65rem] font-semibold tracking-[.08em] uppercase"
-          style={{ color: "var(--color-muted)" }}
-        >
-          {r.name}
-        </p>
-        <span
-          className="text-[.58rem] font-medium px-[.7rem] py-[.2rem]"
-          style={{
-            background: "var(--color-blush-pale)",
-            color: "var(--color-blush-deep)",
-            borderRadius: "999px",
-          }}
-        >
-          {r.tag}
-        </span>
-      </div>
+      </p>
     </div>
   );
 }
@@ -131,7 +159,7 @@ function MarqueeRow({
         style={{ animationDuration: `${duration}s` }}
       >
         {[...items, ...items].map((r, i) => (
-          <ReviewCard key={i} r={r} />
+          <ReviewCard key={i} r={r} i={i} />
         ))}
       </div>
     </div>
