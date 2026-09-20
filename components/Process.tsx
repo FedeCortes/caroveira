@@ -27,7 +27,7 @@ export default function Process() {
   return (
     <section
       id="proceso"
-      className="py-20 md:py-28 px-6 md:px-16 relative overflow-hidden"
+      className="py-14 md:py-28 px-6 md:px-16 relative overflow-hidden"
       style={{ background: "var(--color-deep)" }}
     >
       {/* Decorative background blob */}
@@ -40,7 +40,7 @@ export default function Process() {
 
         {/* Header */}
         <Reveal>
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-8 md:mb-10">
             <span
               className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
@@ -58,7 +58,7 @@ export default function Process() {
 
         <Reveal delay={0.1}>
           <h2
-            className="font-serif text-white leading-[1.1] mb-14"
+            className="font-serif text-white leading-[1.1] mb-9 md:mb-14"
             style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 700 }}
           >
             Sacar turno es{" "}

@@ -373,14 +373,14 @@ export default function Services() {
   return (
     <section
       id="servicios"
-      className="py-20 md:py-28 px-6 md:px-16"
+      className="py-14 md:py-28 px-6 md:px-16"
       style={{ background: "var(--color-cream)" }}
     >
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <Reveal>
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-8 md:mb-10">
             <span
               className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{

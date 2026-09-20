@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="flex flex-1 items-center max-w-[1600px] w-full mx-auto">
 
           {/* ── Content ── */}
-          <div className="flex-1 min-w-0 flex flex-col justify-center px-6 pt-6 pb-14 md:py-14 md:pl-[7rem] md:pr-10 relative z-10">
+          <div className="flex-1 min-w-0 flex flex-col justify-center px-6 pt-2 pb-14 md:py-14 md:pl-[7rem] md:pr-10 relative z-10">
 
             {/* Badge (desktop only — merged into the photo caption on mobile) */}
             <span
@@ -162,7 +162,7 @@ export default function Hero() {
 
             {/* Stats */}
             <div
-              className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 mt-8 pt-6 md:mt-12 md:pt-7"
+              className="grid grid-cols-4 gap-x-1 gap-y-6 mt-8 pt-6 md:mt-12 md:pt-7"
               style={{ borderTop: "1px solid var(--color-border)" }}
             >
               {[
@@ -173,19 +173,17 @@ export default function Hero() {
               ].map((s, i) => (
                 <div
                   key={s.val}
-                  className={`text-center py-2 ${
-                    i === 3 ? "" : i === 1 ? "sm:border-r" : "border-r"
-                  }`}
+                  className={`text-center py-2 ${i === 3 ? "" : "border-r"}`}
                   style={{ borderColor: "var(--color-border)" }}
                 >
                   <span
-                    className="block font-serif text-[1rem] mb-[.3rem]"
+                    className="block font-serif text-[.85rem] md:text-[1rem] mb-[.3rem]"
                     style={{ color: "var(--color-deep)" }}
                   >
                     {s.val}
                   </span>
                   <span
-                    className="block text-[.52rem] tracking-[.13em] uppercase"
+                    className="block text-[.46rem] md:text-[.52rem] tracking-[.1em] md:tracking-[.13em] uppercase leading-[1.3]"
                     style={{ color: "var(--color-muted)" }}
                   >
                     {s.lbl}

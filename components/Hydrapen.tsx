@@ -19,16 +19,16 @@ export default function Hydrapen() {
   return (
     <section
       id="hydrapen"
-      className="py-20 md:py-28 px-6 md:px-16"
+      className="py-14 md:py-28 px-6 md:px-16"
       style={{ background: "#fff" }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-[1.15fr_1fr] gap-12 md:gap-20 items-center">
+        <div className="grid md:grid-cols-[1.15fr_1fr] gap-8 md:gap-20 items-center">
           {/* ── Text column ── */}
           <div className="order-2 md:order-1">
             <Reveal>
               <span
-                className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase mb-6 px-4 py-[.4rem]"
+                className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase mb-5 md:mb-6 px-4 py-[.4rem]"
                 style={{
                   background: "var(--color-gold-pale)",
                   color: "var(--color-gold)",

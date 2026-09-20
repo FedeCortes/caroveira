@@ -10,7 +10,7 @@ export default function CTA() {
   return (
     <section
       id="contacto"
-      className="relative py-24 md:py-36 px-6 text-center overflow-hidden"
+      className="relative py-16 md:py-36 px-6 text-center overflow-hidden"
       style={{
         background:
           "linear-gradient(135deg, var(--color-blush-lt), var(--color-blush-pale))",

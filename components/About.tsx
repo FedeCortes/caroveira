@@ -17,14 +17,14 @@ export default function About() {
   return (
     <section
       id="quien"
-      className="py-20 md:py-28 px-6 md:px-16"
+      className="py-14 md:py-28 px-6 md:px-16"
       style={{ background: "#fff" }}
     >
       <div className="max-w-6xl mx-auto">
 
         {/* Section header */}
         <Reveal>
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-8 md:mb-12">
             <span
               className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
@@ -76,8 +76,7 @@ export default function About() {
                 <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
                   acné y sus secuelas
                 </strong>
-                . Me apasiona trabajar con cada piel como si fuera única —
-                porque lo es.
+                .
               </p>
               <p>
                 Combino tecnología de última generación con los activos más

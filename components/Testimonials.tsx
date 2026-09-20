@@ -140,12 +140,12 @@ function MarqueeRow({
 
 export default function Testimonials() {
   return (
-    <section id="testimonios" className="py-20 md:py-28" style={{ background: "#fff" }}>
+    <section id="testimonios" className="py-14 md:py-28" style={{ background: "#fff" }}>
       <div className="max-w-6xl mx-auto px-6 md:px-16">
 
         {/* Header */}
         <Reveal>
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-8 md:mb-10">
             <span
               className="inline-flex items-center gap-2 text-[.75rem] font-semibold tracking-[.08em] uppercase px-4 py-[.4rem]"
               style={{
@@ -176,7 +176,7 @@ export default function Testimonials() {
 
         {/* Trust bar */}
         <Reveal delay={0.18}>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-12">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-8 md:mb-12">
             <div className="flex items-center gap-2">
               <span style={{ color: "var(--color-blush-deep)", fontSize: "1.1rem", letterSpacing: "2px" }}>
                 ★★★★★
