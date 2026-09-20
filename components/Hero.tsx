@@ -112,8 +112,15 @@ export default function Hero() {
               className="text-[.98rem] leading-[1.95] max-w-[370px] mb-9"
               style={{ color: "var(--color-muted)" }}
             >
-              Especialista en piel acneica y glow skin. Tecnología de vanguardia
-              y cosmética coreana para resultados que se ven.
+              Especialista en{" "}
+              <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                piel acneica y glow skin
+              </strong>
+              . Tecnología de vanguardia y cosmética coreana para{" "}
+              <strong className="font-semibold" style={{ color: "var(--color-deep)" }}>
+                resultados que se ven
+              </strong>
+              .
             </p>
 
             {/* CTAs */}
