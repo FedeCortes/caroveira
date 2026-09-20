@@ -2,7 +2,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
-import FeatureStrip from "@/components/FeatureStrip";
 import Services from "@/components/Services";
 import Hydrapen from "@/components/Hydrapen";
 import Process from "@/components/Process";
@@ -25,7 +24,6 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
-        <FeatureStrip />
         <Services />
         <Hydrapen />
         <Process />
