@@ -89,28 +89,29 @@ export default function Process() {
                     "transparent";
                 }}
               >
-                {/* Number badge */}
-                <div
-                  className="flex items-center justify-center w-12 h-12 mb-6"
-                  style={{
-                    border: "1px solid rgba(232,184,168,0.4)",
-                    borderRadius: "999px",
-                  }}
-                >
+                {/* Number + title */}
+                <div className="flex items-center gap-3 mb-3">
                   <span
-                    className="font-serif italic text-[1.1rem]"
-                    style={{ color: "var(--color-blush)" }}
+                    className="flex items-center justify-center w-8 h-8 flex-shrink-0"
+                    style={{
+                      border: "1px solid rgba(232,184,168,0.4)",
+                      borderRadius: "999px",
+                    }}
                   >
-                    {s.num}
+                    <span
+                      className="font-serif italic text-[.9rem]"
+                      style={{ color: "var(--color-blush)" }}
+                    >
+                      {s.num}
+                    </span>
                   </span>
+                  <p
+                    className="text-[.95rem] font-medium"
+                    style={{ color: "#fff" }}
+                  >
+                    {s.title}
+                  </p>
                 </div>
-
-                <p
-                  className="text-[.95rem] font-medium mb-3"
-                  style={{ color: "#fff" }}
-                >
-                  {s.title}
-                </p>
                 <p
                   className="text-[.8rem] leading-[1.85]"
                   style={{ color: "rgba(255,255,255,.62)" }}
