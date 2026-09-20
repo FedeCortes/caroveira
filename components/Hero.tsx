@@ -23,28 +23,12 @@ export default function Hero() {
         glow
       </div>
 
-      {/* Blob (desktop right panel background) */}
-      <div
-        className="absolute right-0 top-0 bottom-0 hidden md:block pointer-events-none overflow-hidden"
-        style={{ width: "42%" }}
-      >
-        <div
-          className="blob absolute top-1/2 right-[-12%] -translate-y-1/2"
-          style={{
-            width: "112%",
-            height: "70%",
-            background:
-              "linear-gradient(150deg, var(--color-blush-lt), var(--color-blush-pale))",
-          }}
-        />
-      </div>
-
       {/* Layout */}
       <div className="flex flex-col flex-1 pt-[72px]">
-        <div className="flex flex-1">
+        <div className="flex flex-1 items-center max-w-[1600px] w-full mx-auto">
 
           {/* ── Content ── */}
-          <div className="flex-1 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-12 max-w-5xl relative z-10">
+          <div className="flex-1 min-w-0 flex flex-col justify-center px-6 py-14 md:pl-[7rem] md:pr-10 relative z-10">
 
             {/* Badge */}
             <span
@@ -82,6 +66,34 @@ export default function Hero() {
                 versión.
               </em>
             </h1>
+
+            {/* Photo banner (mobile only) */}
+            <div
+              className="md:hidden relative mb-7 overflow-hidden rounded-[28px]"
+              style={{
+                aspectRatio: "4/5",
+                boxShadow: "0 20px 44px -18px rgba(28,20,18,0.35)",
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/caro-veira.jpg"
+                alt="Caro Veira, dermocosmiatra"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "top center" }}
+                loading="eager"
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(28,20,18,0) 55%, rgba(28,20,18,0.45) 100%)",
+                }}
+              />
+              <span className="absolute left-5 bottom-4 text-[.78rem] font-semibold tracking-[.08em] uppercase text-white">
+                Caro Veira
+              </span>
+            </div>
 
             {/* Accent divider */}
             <div className="flex items-center gap-3 mb-7">
@@ -165,6 +177,41 @@ export default function Hero() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* ── Photo (desktop) ── */}
+          <div
+            className="hidden md:flex relative flex-shrink-0 items-center justify-center mr-10 lg:mr-16 z-10"
+            style={{ width: "min(26vw, 360px)" }}
+          >
+            <div
+              className="blob absolute"
+              style={{
+                width: "150%",
+                height: "82%",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                background:
+                  "linear-gradient(150deg, var(--color-blush-lt), var(--color-blush-pale))",
+              }}
+            />
+            <div
+              className="blob relative w-full overflow-hidden"
+              style={{
+                aspectRatio: "4/5",
+                boxShadow: "0 34px 70px -22px rgba(28,20,18,0.32)",
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/caro-veira.jpg"
+                alt="Caro Veira, dermocosmiatra"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "top center" }}
+                loading="eager"
+              />
             </div>
           </div>
         </div>
