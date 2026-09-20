@@ -30,9 +30,9 @@ export default function Hero() {
           {/* ── Content ── */}
           <div className="flex-1 min-w-0 flex flex-col justify-center px-6 pt-6 pb-14 md:py-14 md:pl-[7rem] md:pr-10 relative z-10">
 
-            {/* Badge */}
+            {/* Badge (desktop only — merged into the photo caption on mobile) */}
             <span
-              className="inline-flex items-center gap-[6px] text-[.78rem] font-semibold tracking-[.08em] uppercase mb-8 px-4 py-[.45rem]"
+              className="hidden md:inline-flex items-center gap-[6px] text-[.78rem] font-semibold tracking-[.08em] uppercase mb-8 px-4 py-[.45rem]"
               style={{
                 background: "var(--color-blush-lt)",
                 color: "var(--color-blush-deep)",
@@ -48,9 +48,9 @@ export default function Hero() {
 
             {/* Headline */}
             <h1
-              className="font-serif leading-[1.02] mb-7"
+              className="font-serif leading-[1.02] mb-4 md:mb-7"
               style={{
-                fontSize: "clamp(3.4rem, 11vw, 7.5rem)",
+                fontSize: "clamp(2.5rem, 11vw, 7.5rem)",
                 fontWeight: 700,
                 color: "var(--color-deep)",
               }}
@@ -69,7 +69,7 @@ export default function Hero() {
 
             {/* Photo banner (mobile only) */}
             <div
-              className="md:hidden relative mb-7 overflow-hidden rounded-[28px]"
+              className="md:hidden relative mb-5 overflow-hidden rounded-[28px]"
               style={{
                 aspectRatio: "1/1",
                 boxShadow: "0 20px 44px -18px rgba(28,20,18,0.35)",
@@ -90,13 +90,21 @@ export default function Hero() {
                     "linear-gradient(180deg, rgba(28,20,18,0) 55%, rgba(28,20,18,0.45) 100%)",
                 }}
               />
-              <span className="absolute left-5 bottom-4 text-[.78rem] font-semibold tracking-[.08em] uppercase text-white">
-                Caro Veira
-              </span>
+              <div className="absolute left-5 right-5 bottom-4">
+                <p className="text-[1.05rem] font-semibold text-white leading-tight">
+                  Caro Veira
+                </p>
+                <p
+                  className="text-[.68rem] font-semibold tracking-[.08em] uppercase"
+                  style={{ color: "rgba(255,255,255,.85)" }}
+                >
+                  Dermocosmiatra · Tigre, Bs As
+                </p>
+              </div>
             </div>
 
-            {/* Accent divider */}
-            <div className="flex items-center gap-3 mb-7">
+            {/* Accent divider (desktop only) */}
+            <div className="hidden md:flex items-center gap-3 mb-7">
               <div
                 className="w-10 h-px"
                 style={{ background: "var(--color-border)" }}
@@ -109,7 +117,7 @@ export default function Hero() {
 
             {/* Description */}
             <p
-              className="text-[.98rem] leading-[1.95] max-w-[370px] mb-9"
+              className="text-[.98rem] leading-[1.95] max-w-[370px] mb-6 md:mb-9"
               style={{ color: "var(--color-mid)" }}
             >
               Especialista en{" "}
@@ -154,7 +162,7 @@ export default function Hero() {
 
             {/* Stats */}
             <div
-              className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 mt-12 pt-7"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 mt-8 pt-6 md:mt-12 md:pt-7"
               style={{ borderTop: "1px solid var(--color-border)" }}
             >
               {[
